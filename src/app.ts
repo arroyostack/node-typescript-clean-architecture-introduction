@@ -1,3 +1,4 @@
-const message: string = "Clean Architecture With Node js and Typescript";
 
-console.log( message );
+const [tsnode, app, ...args] = process.argv;
+
+console.log( tsnode, app, ...args );
