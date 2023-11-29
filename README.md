@@ -1,5 +1,7 @@
 # Node.js: From Zero to Expert Course
 
+Each branch in this repository represents a course module.
+
 Welcome to our Node.js course: From Zero to Expert! 🚀
 
 ## Technologies Used
