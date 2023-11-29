@@ -1,14 +1,16 @@
 import fs from 'fs';
+import { yarg } from './config/plugins/args.plugin';
+
+const { b: base, l: limit, s: showTable } = yarg;
 
 let outputMessage = '';
-const base = 6;
 const headerMessage = `
 ===========================
 Tabla del ${base}
 ===========================
 `;
 
-for ( let i = 0;i <= 10;i++ ) {
+for ( let i = 0;i <= limit;i++ ) {
     outputMessage += `${base} x ${i} = ${base * i} \n`;
 }
 
@@ -21,4 +23,6 @@ fs.mkdirSync( outputPath, { recursive: true } );
 // File system will write a tableX.txt in outputs, if outputs folder not found will use the function above.
 fs.writeFileSync( `outputs/table-${base}.txt`, outputMessage );
 
-console.log( outputMessage );
+if ( showTable ) {
+    console.log( outputMessage );
+}

@@ -1,4 +1,14 @@
+import { yarg } from "./config/plugins/args.plugin";
+import { ServerApp } from "./presentation/server-app";
 
-const [tsnode, app, ...args] = process.argv;
+( async () => {
 
-console.log( tsnode, app, ...args );
+    await main();
+} )();
+
+async function main() {
+    const { b: base, l: limit, s: showTable } = yarg;
+    ServerApp.run( { base, limit, showTable } );
+    console.log( 'Ooowee! this is main invoked.' );
+};
+
