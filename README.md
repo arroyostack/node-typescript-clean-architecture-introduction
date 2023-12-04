@@ -1,6 +1,7 @@
 # Node.js: From Zero to Expert Course
 
-Each branch in this repository represents a course module.
+Each branch in this repository represents a The first three modules of the course.
+The rest of App build in the course are linkedin in this Readme.
 
 Welcome to our Node.js course: From Zero to Expert! 🚀
 
